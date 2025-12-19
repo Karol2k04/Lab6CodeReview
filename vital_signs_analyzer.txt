@@ -35,7 +35,7 @@ def analyze(hr, spo2, log=True, override_status=None, verbose=0):
     last_values["flag"] = force
 
     if verbose:
-        print("Analyzing vital data:", hr, spo2, "force:", force)
+        print("Analyzing vital data:", hr," ", spo2, "force:", force)
 
     n1 = normalize_hr(hr)
     n2 = normalize_spo2(spo2)

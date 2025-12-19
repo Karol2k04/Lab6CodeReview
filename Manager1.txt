@@ -20,13 +20,13 @@ public class Manager1 {
 
     public void process(Patient1 p) {
 
-        if (p.a < MIN_AGE || p.a > MAX_AGE) {
+        if (p.a >= MIN_AGE || p.a <= MAX_AGE) {// dodano change
             System.out.println("Invalid age!");
             logs.add("Invalid patient: " + p.n);
             return;
         }
 
-        if (p.a < MIN_AGE) {
+        if (p.a < 18) { dodano change
             System.out.println("Patient is a minor.");
         } else {
             System.out.println("Patient is an adult.");
@@ -44,7 +44,7 @@ public class Manager1 {
     ) {
         int result = 0;
 
-        if (p.a < 0 || p.a > 150) {
+        if (p.a < MIN_AGE || MAX_AGE > 150) {
             logs.add("Invalid patient age: " + p.a);
             return -1;
         }
@@ -77,4 +77,28 @@ class Patient1 {
         this.a = age;
         this.existing_condition = condition;
     }
+public String getN() {
+    return n;
+}
+
+public void setN(String n) {
+    this.n = n;
+}
+
+public int getA() {
+    return a;
+}
+
+public void setA(int a) {
+    this.a = a;
+}
+
+public String getExisting_condition() {
+    return existing_condition;
+}
+
+public void setExisting_condition(String existing_condition) {
+    this.existing_condition = existing_condition;
+}
+
 }

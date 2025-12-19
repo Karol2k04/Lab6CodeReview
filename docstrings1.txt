@@ -1,9 +1,9 @@
-def calcMed(w, AGE, code, urgent=False):
+def calcMed(w, age, code,drug_name, urgent=False)://dodano change 
     """
     Calculates medication dose based on weight.
 
     PARAMS:
-        weight_kg: float - patient body mass in kg
+        w: float - patient body mass in kg//dodano change 
         age: years
         drug_name (str) name of drug: "amox", "ibup", etc.
         emergency - optional flag for EMERGENCY USE ONLY dose
@@ -15,7 +15,7 @@ def calcMed(w, AGE, code, urgent=False):
     - If weight is negative it returns None (!!!)
     """
 
-    if w <= 0:
+    if (w <= 0 || w>= 600)://dodano change 
         raise ValueError("weight_kg must be positive")
 
     if AGE < 0:
