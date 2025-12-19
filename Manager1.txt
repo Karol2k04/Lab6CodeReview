@@ -20,7 +20,7 @@ public class Manager1 {
 
     public void process(Patient1 p) {
 
-        if (p.a >= MIN_AGE || p.a <= MAX_AGE) {// dodano change
+        if (p.a <= MIN_AGE || p.a >= MAX_AGE) {// dodano change
             System.out.println("Invalid age!");
             logs.add("Invalid patient: " + p.n);
             return;
@@ -44,7 +44,7 @@ public class Manager1 {
     ) {
         int result = 0;
 
-        if (p.a < MIN_AGE || MAX_AGE > 150) {
+        if (p.a <= MIN_AGE || p.a >= MAX_AGE) {
             logs.add("Invalid patient age: " + p.a);
             return -1;
         }
